@@ -1,0 +1,4 @@
+/pdf/input_pdf/*
+!/pdf/input_pdf/.keep
+/pdf/output_pdf/*
+!/pdf/output_pdf/.keep
