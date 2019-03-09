@@ -1,3 +1,5 @@
+require 'fileutils'
+
 INPUT_PATH  = '/pdf/input_pdf'
 OUTPUT_PATH = '/pdf/output_pdf'
 
@@ -14,5 +16,7 @@ pdf_files.each do |input_pdf|
 
   system grayscale_command
 
-  system "pdftk /tmp/0.pdf /tmp/grayscale.pdf /tmp/1.pdf cat output #{output_pdf}"
+  system "pdftk /tmp/0.pdf /tmp/grayscale.pdf /tmp/2.pdf cat output #{output_pdf}"
+
+  FileUtils.rm(Dir.glob('/tmp/*.pdf'))
 end
