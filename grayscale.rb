@@ -1,7 +1,7 @@
 require 'fileutils'
 
-INPUT_PATH  = '/pdf/input_pdf'
-OUTPUT_PATH = '/pdf/output_pdf'
+INPUT_PATH  = '/pdf/input'
+OUTPUT_PATH = '/pdf/output'
 
 pdf_files = Dir.glob(File.join(INPUT_PATH, '*.pdf'))
 pdf_files.each do |input_pdf|
