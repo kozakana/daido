@@ -10,4 +10,4 @@ WORKDIR /
 
 COPY grayscale.rb /
 
-CMD ["ruby", "/grayscale.rb"]
+CMD ["ruby", "/grayscale.rb", "-s", "c:1", "-s", "g:2-r2", "-s", "c:r1"]
