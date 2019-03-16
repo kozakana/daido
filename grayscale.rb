@@ -32,7 +32,7 @@ pdf_files.each do |pdf_file|
     if process[:color] == 'g'
       # convert grayscale pdf
       grayscale_command =  "gs -sOutputFile=/tmp/g#{idx}.pdf "
-      grayscale_command += '-sDEVICE=pdfwrite -sColorConversionStrategy=Gray -dProcessColorModel=/DeviceGray -dCompatibilityLevel=1.4 -dAutoRotatePages=/None '
+      grayscale_command += '-sDEVICE=pdfwrite -sColorConversionStrategy=Gray -dProcessColorModel=/DeviceGray -dCompatibilityLevel=1.4 -dAutoRotatePages=/None -dNOPAUSE '
       grayscale_command += "-dBATCH /tmp/#{idx}.pdf"
       system grayscale_command
 
