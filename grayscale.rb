@@ -26,6 +26,7 @@ pdf_files = Dir.glob(File.join(INPUT_PATH, '*.pdf'))
 pdf_files.each do |pdf_file|
   input_pdf = Shellwords.escape(pdf_file)
   output_pdf = File.join(OUTPUT_PATH, File.basename(input_pdf))
+  puts "Processing #{pdf_file}"
   process_list.each.with_index do |process, idx|
     system "pdftk #{input_pdf} cat #{process[:page]} output /tmp/#{idx}.pdf"
 
