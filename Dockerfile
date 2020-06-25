@@ -1,8 +1,10 @@
-FROM ruby:2.6-alpine3.8
+FROM ruby:2.6-alpine3.12
 
 MAINTAINER kozakana
 
-RUN apk update && \
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.8/main" >> /etc/apk/repositories && \
+    echo "http://dl-cdn.alpinelinux.org/alpine/v3.8/community" >> /etc/apk/repositories && \
+    apk update && \
     apk add pdftk ghostscript && \
     mkdir /pdf
 
